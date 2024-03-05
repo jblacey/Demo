@@ -1,0 +1,10 @@
+- name: Cronjob Replacement
+  hosts:
+    - node1
+    - node2
+  tasks:
+    - name: Demo running a cron script
+      ansible.builtin.script: cron.sh
+    - name: Demo custom message
+      debug:
+        msg: Running Cron script on {{inventory_hostname}}
